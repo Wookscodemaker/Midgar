@@ -1,28 +1,40 @@
 #include<iostream>
 #include<string>
 using namespace std;
-char a[1005],b[1005],c[1005];
-string mult(string a,string b){
-    int lena=a.size(),lenb=b.size();
+int a[1005],b[1005],c[1005];
+string mult(string sa,string sb){
+    int lena=sa.size(),lenb=sb.size();
     for(int i=0;i<lena;i++){
-        a[lena-1-i]=a[i]-'0';
+        a[lena-1-i]=sa[i]-'0';
     }
     for(int i=0;i<lenb;i++){
-        b[lena-1-i]=b[i]-'0';
+        b[lenb-1-i]=sb[i]-'0';
     }
-    int lfinal = lena+lenb;
-    if(lena>=lenb){
-        for(int i=lena-1;i>=0;i--){
-            for(int j=lenb-1;i>=0;i--){
-                
-            }
-        }
-    }else{
-        for(int i=lenb-1;i>=0;i--){
-
+    int lff = lena+lenb;
+    for(int i=0;i<=lena-1;i++){
+        for(int j=0;j<=lenb-1;j++){
+            c[i+j]=c[i+j]+(a[i]*b[j]);
         }
     }
+    for(int i=0;i<=lff;i++){
+        c[i+1]+=c[i]/10;
+        c[i]%=10;
+    }
+    string ff;
+    int z;
+    for(z=lff-1;z>=0;z--){
+        if(c[z]!=0){
+            break;
+        }
+    }
+    lff=z+1;
+    for(int i=lff-1;i>=0;i--){
+        ff+=c[i]+'0';
+    }
+    return ff;
 }
 int main(){
-    
+    string sa,sb;
+    cin >> sa >> sb;
+    cout << mult(sa,sb)  << endl;
 }
