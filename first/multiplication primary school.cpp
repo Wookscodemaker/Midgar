@@ -40,4 +40,5 @@ int main(){
     string sa,sb;
     cin >> sa >> sb;
     cout << mult(sa,sb)  << endl;
+    return 0;
 }
