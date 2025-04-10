@@ -12,14 +12,24 @@ int compare(string sa,string sb){
             if(sa[i]!=sb[i]){
                 if(sa[i]>sb[i]){
                     return 1;
+<<<<<<< HEAD
                 }else{
                     return 0;
+=======
+                    break;
+                }else{
+                    return 0;
+                    break;
+>>>>>>> 97b9b431f934d4cb5c7443dc45a1ee61f97db608
                 }
             }
         }
         return -1;
     }
+<<<<<<< HEAD
     return -1;
+=======
+>>>>>>> 97b9b431f934d4cb5c7443dc45a1ee61f97db608
 }
 int main(){
     int s;
