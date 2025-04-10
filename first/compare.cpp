@@ -12,15 +12,14 @@ int compare(string sa,string sb){
             if(sa[i]!=sb[i]){
                 if(sa[i]>sb[i]){
                     return 1;
-                    break;
                 }else{
                     return 0;
-                    break;
                 }
             }
         }
         return -1;
     }
+    return -1;
 }
 int main(){
     int s;
