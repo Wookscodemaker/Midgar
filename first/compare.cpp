@@ -14,6 +14,7 @@ int compare(string sa,string sb){
                     return 1;
                 }else{
                     return 0;
+
                 }
             }
         }
