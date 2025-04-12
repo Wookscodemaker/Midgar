@@ -13,7 +13,6 @@ int compare(int sa[1001],int sb[1001],int lena,int lenb){
                     return 1;
                 }else{
                     return -1;
-
                 }
             }
         }
