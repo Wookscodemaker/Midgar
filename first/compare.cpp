@@ -1,8 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
-int compare(string sa,string sb){
-    int lena=sa.size(),lenb=sb.size();
+int compare(int sa[1001],int sb[1001],int lena,int lenb){
     if(lena>lenb){
         return 1;
     }else if(lena<lenb){
@@ -23,10 +22,9 @@ int compare(string sa,string sb){
     return -1;
 }
 int main(){
-    int s;
-    string sa,sb;
-    cin >> sa >> sb;
-    s = compare(sa,sb);
+    int a[1005],b[1005],m,n;
+    
+    s = compare(a[],b[],i,j);
     cout << s;
     return 0;
 }
