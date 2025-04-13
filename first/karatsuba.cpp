@@ -24,7 +24,7 @@ string KaratdubaMult(string a,string b){
     int n =a.size();
     int m =b.size();
     
-    return ;
+    return 1;
 }
 int main(){
 
