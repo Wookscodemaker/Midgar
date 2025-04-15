@@ -2,6 +2,27 @@
 #include<string>
 using namespace std;
 int a[1005],b[1005],c[1005];
+string sub(string sa,string sb){
+    int lena=sa.size(),lenb=sb.size();
+    for(int i=0;i<lena;i++)
+        a[lena-1-i]=sa[i]-'0';
+    for(int i=0;i<lenb;i++)
+        b[lenb-1-i]=sb[i]-'0'; 
+    int lmax = lena>lenb?lena:lenb;
+    for(int i=0;i<lmax;i++){
+        a[i]-=b[i];
+        if(a[i]<0){
+        a[i+1]-=1;
+        a[i]+=10;
+        }
+       // a[i]%=10;
+    }
+    if(a[lmax])lmax++;
+    string ans;
+    for(int i=lmax-1;i>=0;i--)
+        ans+=a[i]+'0';
+    return ans;
+}
 string mult(string sa,string sb){
     int lena=sa.size(),lenb=sb.size();
     for(int i=0;i<lena;i++){//存储a
@@ -32,6 +53,25 @@ string mult(string sa,string sb){
         ff+=c[i]+'0';
     }
     return ff;
+}
+int compare(int sa[1001],int sb[1001],int lena,int lenb){
+    if(lena>lenb){
+        return 1;
+    }else if(lena<lenb){
+        return -1;
+    }else if(lena==lenb){
+        for(int i=lena-1;i>=0;i--){
+            if(sa[i]!=sb[i]){
+                if(sa[i]>sb[i]){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            }
+        }
+        return 0;
+    }
+    return 0;
 }
 string divi(string sa,string sb){
     int lena=sa.size(),lenb=sb.size();
