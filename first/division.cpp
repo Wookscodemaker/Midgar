@@ -83,9 +83,17 @@ string divi(string sa,string sb){
     }
     int lmax=lenb>lena?lenb:lena;
     int lmin=lenb>lena?lena:lenb;
+    int max[1001],min[1001];
+    if(lenb>lena){
+        memcpy(max,b,sizeof(max));
+        memcpy(min,a,sizeof(min));
+    }else{
+        memcpy(max,a,sizeof(max));
+        memcpy(min,b,sizeof(min));
+    }
     int lff=lmax+1-lmin;
     for(int i=lmax-1;i=0;i--){
-        
+
     }
 
 }
