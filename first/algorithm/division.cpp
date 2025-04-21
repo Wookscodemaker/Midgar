@@ -74,6 +74,7 @@ int compare(int sa[1001],int sb[1001],int lena,int lenb){
     return 0;
 }
 string divi(string sa,string sb){
+    int result[1001];
     int lena=sa.size(),lenb=sb.size();
     for(int i=0;i<lena;i++){//存储a
         a[lena-1-i]=sa[i]-'0';
