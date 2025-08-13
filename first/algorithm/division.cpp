@@ -73,6 +73,25 @@ int compare(int sa[1001],int sb[1001],int lena,int lenb){
     }
     return 0;
 }
+string sub(string sa,string sb){
+    int lena=sa.size(),lenb=sb.size();
+    for(int i=0;i<lena;i++)
+        a[lena-1-i]=sa[i]-'0';
+    for(int i=0;i<lenb;i++)
+        b[lenb-1-i]=sb[i]-'0'; 
+    for(int i=0;i<lena;i++){
+        a[i]-=b[i];
+        if(a[i]<0){
+        a[i+1]-=1;
+        a[i]+=10;
+        }
+    }
+    if(a[lena])lena++;
+    string ans;
+    for(int i=lena-1;i>=0;i--)
+        ans+=a[i]+'0';
+    return ans;
+}
 string divi(string sa,string sb){
     int result[1001];
     int lena=sa.size(),lenb=sb.size();
@@ -82,19 +101,15 @@ string divi(string sa,string sb){
     for(int i=0;i<lenb;i++){//存储b
         b[lenb-1-i]=sb[i]-'0';
     }
-    int lmax=lenb>lena?lenb:lena;
-    int lmin=lenb>lena?lena:lenb;
-    int max[1001],min[1001];
-    if(lenb>lena){
-        memcpy(max,b,sizeof(max));
-        memcpy(min,a,sizeof(min));
-    }else{
-        memcpy(max,a,sizeof(max));
-        memcpy(min,b,sizeof(min));
-    }
-    int lff=lmax+1-lmin;
-    for(int i=lmax-1;i=0;i--){
-
-    }
-
+    int lff=lena+1-lenb;
+    int x;
+    do{ 
+        for(int i=lena-1;i=0;i--){
+            int xa[1001];
+            for(int j=lena-i-1;j=0;j--){
+                xa[j]=a[i+j];
+            }
+        }
+    }while ()
+    
 }
