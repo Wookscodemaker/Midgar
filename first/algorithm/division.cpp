@@ -17,7 +17,6 @@ string sub(string sa,string sb){
         }
        // a[i]%=10;
     }
-    if(a[lmax])lmax++;
     string ans;
     for(int i=lmax-1;i>=0;i--)
         ans+=a[i]+'0';

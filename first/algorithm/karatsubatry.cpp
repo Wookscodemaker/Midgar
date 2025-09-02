@@ -6,9 +6,9 @@ namespace karatsuba{
 /// @param a 使用的两个乘积
 /// @param b 使用的两个乘积
 /// @return 乘法结果
-int karatsuba_mult(int a,int b){
-    int result;
-    int n,p=0,q=0,s,d,f=0,e=0;
+long long karatsuba_mult(int a,int b){
+    long long result;
+    long long n,p=0,q=0,s,d,f=0,e=0;
     s=a,d=b;
     do{
         s=s/10;
@@ -39,15 +39,15 @@ int karatsuba_mult(int a,int b){
         f=n-p;
         a=a*pow(10,f);
     }
-    int a1,a2;
-    int b1,b2;
-    int nh;
+    long long a1,a2;
+    long long b1,b2;
+    long long nh;
     nh=n/2;
     a1=a/pow(10,nh);
     b1=b/pow(10,nh);
     a2=a-(a1*pow(10,nh));
     b2=b-(b1*pow(10,nh));
-    int z,x,v,m;
+    long long z,x,v,m;
     z=(a1+a2)*(b1+b2);
     v=a1*b1;
     m=a2*b2;
@@ -61,8 +61,9 @@ int karatsuba_mult(int a,int b){
 using namespace algorithm;
 using namespace karatsuba;
 int main(){
-    int ta,tb,res;
-    std::cin >> ta >> tb;
+    long long ta,tb,res;
+    //std::cin >> ta >> tb;
+    ta=123123,tb=234234;
     res=karatsuba_mult(ta,tb);
     std::cout << res;
     return 0;
