@@ -29,7 +29,6 @@ string sub(string sa, string sb) {
         a[lena - 1 - i] = sa[i] - '0';
     for (int i = 0; i < lenb; i++)
         b[lenb - 1 - i] = sb[i] - '0';
-
     int lmax = max(lena, lenb);
     for (int i = 0; i < lmax; i++) {
         a[i] -= b[i];
