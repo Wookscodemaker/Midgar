@@ -22,18 +22,23 @@ double operat(double y,int q){
 double sin_calculater(int numerator,int denominator){
     double frac=Pi*numerator/denominator;
     double res0=0;
-    for(int i=0;i<9;i++){
+    for(int i=0;i<12;i++){
         res0=res0+operat(frac,(i+1));
     }
     return res0;
 }
 int main(){
-    cout << "sinΠ*";
-    int a,b;
-    cin >> a;
-    cout << "/";
-    cin >> b;
-    double res1=sin_calculater(a,b);
-    cout <<res1;
+    char flag1;
+    do{
+        cout << "sinΠ*";
+        int a,b;
+        cin >> a;
+        cout << "/";
+        cin >> b;
+        double res1=sin_calculater(a,b);
+        cout <<res1;
+        cout << "Do you want to continue?(y/n):";
+        cin >> flag1;
+    }while(flag1=='y');
     return 0;
 }
