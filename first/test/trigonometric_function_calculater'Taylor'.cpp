@@ -2,8 +2,8 @@
 #include<cmath>
 using namespace std;
 double Pi=3.14159265359;
-int fac(int x){
-    int fac_result=1;
+long fac(int x){
+    long fac_result=1;
     for(int j=0;j<x;j++){
         fac_result=fac_result*(j+1);
     }
@@ -22,7 +22,7 @@ double operat(double y,int q){
 double sin_calculater(int numerator,int denominator){
     double frac=Pi*numerator/denominator;
     double res0=0;
-    for(int i=0;i<12;i++){
+    for(int i=0;i<15;i++){
         res0=res0+operat(frac,(i+1));
     }
     return res0;
