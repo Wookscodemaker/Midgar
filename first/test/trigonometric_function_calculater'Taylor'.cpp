@@ -36,7 +36,7 @@ int main(){
         cout << "/";
         cin >> b;
         double res1=sin_calculater(a,b);
-        cout <<res1;
+        cout <<res1 << endl;
         cout << "Do you want to continue?(y/n):";
         cin >> flag1;
     }while(flag1=='y');
