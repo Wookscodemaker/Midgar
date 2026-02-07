@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<iomanip>
 using namespace std;
 double Pi=3.14159265359;
 long fac(int x){
@@ -30,12 +31,12 @@ double sin_calculater(int numerator,int denominator){
 int main(){
     char flag1;
     do{
-        cout << "sinΠ*";
+        cout << "input the degree:";
         int a,b;
         cin >> a;
-        cout << "/";
-        cin >> b;
+        b=180;
         double res1=sin_calculater(a,b);
+        cout << fixed << setprecision(16);
         cout <<res1 << endl;
         cout << "Do you want to continue?(y/n):";
         cin >> flag1;

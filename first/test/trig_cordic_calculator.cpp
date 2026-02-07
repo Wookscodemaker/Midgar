@@ -53,6 +53,7 @@ int main(){
         double a;
         cin >> a;
         double res1=def.sin_calculator(a);
+        cout << fixed << setprecision(16);
         cout <<res1 << endl;
         cout << "Do you want to continue?(y/n):";
         cin >> flag1;
