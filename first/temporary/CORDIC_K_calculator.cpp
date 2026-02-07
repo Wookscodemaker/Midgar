@@ -13,7 +13,7 @@ double CORDIC_K_calculator(int n){
 }
 int main(){
     cout << fixed << setprecision(16);
-    cout << CORDIC_K_calculator(100000000);
+    cout << CORDIC_K_calculator(10000);
     return 0;
 }
 /*result=0.6072529350088814*/
