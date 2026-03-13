@@ -3,7 +3,7 @@
 #include<unordered_map>
 using namespace std;
 int main(){
-    vector<int> nums={2,7,11,15};
+    vector<int> nums={1,1,1,3};
     int target=9;
     unordered_map<int, int> nikon; // 哈希表：值 -> 下标
         for (int j = 0; j < size(nums); j++) { // 遍历数组，当前下标为 j

@@ -1,9 +1,9 @@
 #include<iostream>
 #include<cmath>
 #include<iomanip>
+#include "timetrack.h"
 using namespace std;
 int main(){
-    cout << fixed << setprecision(55);
-    cout << atan(1);
+    timetrack();
     return 0;
 }
