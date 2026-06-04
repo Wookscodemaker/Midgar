@@ -50,8 +50,12 @@ int main()
     T1=(N0*(v1-v0))+(N1*(v12-v2))+(N1*(v13-v3))+(N2*(v123-v23));
     T2=(N0*(v2-v0))+(N1*(v12-v1))+(N1*(v23-v3))+(N2*(v123-v13));
     T3=(N0*(v3-v0))+(N1*(v23-v2))+(N1*(v13-v1))+(N2*(v123-v12));
-    cout <<"城1的金额："<< T1<<endl;
-    cout <<"城2的金额："<<T2<<endl;
-    cout <<"城3的金额："<<T3<<endl;
+    cout <<"1:"<<v1<<endl;
+    cout <<"2:"<<v2<<endl;
+    cout <<"3:"<<v3<<endl;
+    cout <<"12:"<<v12<<endl;
+    cout <<"13:"<<v13<<endl;
+    cout <<"23:"<<v23<<endl;
+    cout <<"123:"<<v123<<endl;
     return 0;
 }
